@@ -1,0 +1,5 @@
+<span>Username:</span> <input type="text" placeholder="username" [(ngModel)]="username">
+<span>Password:</span> <input type="text" placeholder="password" [(ngModel)]="password">
+<button (click)="signup()">Sign-Up</button> 
+<button (click)="login()">Login</button>
+<a [routerLink]='["/signup"]'></a>

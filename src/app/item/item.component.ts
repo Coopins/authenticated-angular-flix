@@ -1,4 +1,4 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-item',
@@ -11,11 +11,11 @@ export class ItemComponent implements OnInit {
   name;
   constructor() { }
 
-  ngOnInit() {  
-    let backDrop = "http://image.tmdb.org/t/p/original" + this.movie.backdrop_path;
+  ngOnInit() {
+    const backDrop = 'http://image.tmdb.org/t/p/original' + this.movie.backdrop_path;
     this.theStyles = {width: '200px', backgroundImage: 'url(' + backDrop + ')'};
 
-    if(!this.movie.name) {
+    if (!this.movie.name) {
       this.name = this.movie.original_title;
     } else {
       this.name = this.movie.name;
